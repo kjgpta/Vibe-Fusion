@@ -6,10 +6,19 @@ using spaCy for tokenization, POS tagging, and entity extraction.
 """
 
 import spacy
-import re
+import re, os
 from typing import Dict, List, Optional, Any
 import nltk
 from nltk.corpus import stopwords
+
+# 1. Choose a local path inside your app directory
+NLTK_DATA = os.path.join(os.getcwd(), "nltk_data")
+
+# 2. Make sure it exists
+os.makedirs(NLTK_DATA, exist_ok=True)
+
+# 3. Tell NLTK where to download and look for data
+nltk.data.path.insert(0, NLTK_DATA)
 
 class NLPAnalyzer:
     def __init__(self):
@@ -23,8 +32,8 @@ class NLPAnalyzer:
         
         # Initialize NLTK components
         try:
-            nltk.download('stopwords', quiet=True)
-            nltk.download('punkt', quiet=True)
+            nltk.download("stopwords", download_dir=NLTK_DATA, quiet=True)
+            nltk.download("punkt",     download_dir=NLTK_DATA, quiet=True)
             self.stop_words = set(stopwords.words('english'))
         except Exception as e:
             print(f"NLTK setup warning: {e}")
@@ -74,7 +83,9 @@ class NLPAnalyzer:
                 'short sleeves', 'long sleeves', 'sleeveless', 'spaghetti straps', 'straps', 'short flutter sleeves', 'cap sleeves', 'quarter sleeves', 'long sleeves', 'full sleeves', 'cropped', 'bishop sleeves', 'balloon sleeves', 'bell sleeves', 'halter', 'tube', 'one-shoulder'
             ],
             'sizes': [
-                'XS', 'S', 'M', 'L', 'XL', 'XXL'
+                'XS', 'S', 'M', 'L', 'XL', 'XXL',
+                'xs', 's', 'm', 'l', 'xl', 'xxl',
+                'small', 'medium', 'large', 'extra small', 'extra large'
             ]
         }
     
@@ -175,8 +186,8 @@ class NLPAnalyzer:
             if token in self.fashion_patterns['coverage'] and not extracted['coverage']:
                 extracted['coverage'] = token
             
-            # Check sizes
-            if token in self.fashion_patterns['sizes'] and not extracted['size']:
+            # Check sizes - improved logic to handle lowercase inputs
+            if not extracted['size']:
                 # Normalize size to standard format (XS, S, M, L, XL, XXL)
                 size_mapping = {
                     'xs': 'XS', 'extra small': 'XS', 'size xs': 'XS',
@@ -186,7 +197,10 @@ class NLPAnalyzer:
                     'xl': 'XL', 'extra large': 'XL', 'size xl': 'XL',
                     'xxl': 'XXL', 'extra extra large': 'XXL', '2xl': 'XXL', 'size xxl': 'XXL'
                 }
-                extracted['size'] = size_mapping.get(token, token.upper())
+                
+                # Check if token is a size (either in patterns or mapping)
+                if token in size_mapping or token.upper() in self.fashion_patterns['sizes']:
+                    extracted['size'] = size_mapping.get(token, token.upper())
         
         # Look for compound phrases
         text_lower = text.lower()

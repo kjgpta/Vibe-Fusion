@@ -217,9 +217,9 @@ def process_user_input(user_input: str, user_prefs: Dict[str, Any]):
                             if value and value not in [None, "", []]:
                                 st.session_state.pending_attributes[key] = value
                                 print(f"✓ Updated pending attributes from current input: {key} = {value}")
-                                # Show debug info for budget specifically
-                                if key == 'budget':
-                                    print(f"  Budget type: {type(value)}, value: {repr(value)}")
+                                # Show debug info for size and budget specifically
+                                if key in ['size', 'budget']:
+                                    print(f"  {key.title()} type: {type(value)}, value: {repr(value)}")
                 except Exception as e:
                     print(f"Error extracting attributes from current input: {e}")
                     pass
