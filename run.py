@@ -97,15 +97,11 @@ def start_streamlit():
     """Start the Streamlit application."""
     print("\n🚀 Starting Streamlit application...")
     print("📍 The app will open in your default web browser")
-    print("🔗 URL: http://localhost:8501")
     print("\n⏹️  Press Ctrl+C to stop the application")
     
     try:
         subprocess.run([
-            sys.executable, "-m", "streamlit", "run", "streamlit_app.py",
-            "--server.port=8501",
-            "--server.address=localhost"
-        ])
+            sys.executable, "-m", "streamlit", "run", "streamlit_app.py",])
     except KeyboardInterrupt:
         print("\n👋 Application stopped by user")
     except Exception as e:
