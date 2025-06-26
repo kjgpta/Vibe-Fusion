@@ -1,0 +1,22 @@
+{
+  "comfy": {"fit": "Relaxed"},
+  "comfortable": {"fit": "Relaxed"},
+  "relaxed": {"fit": "Relaxed"},
+  "loose": {"fit": "Relaxed"},
+  "flowy": {"fit": "Flowy"},
+  "bodycon": {"fit": "Body hugging"},
+  "oversized": {"fit": "Oversized"},
+  "baggy": {"fit": "Oversized"},
+  "tight": {"fit": "Body hugging"},
+  "fitted": {"fit": "Body hugging"},
+  "form-fitting": {"fit": "Body hugging"},
+  "body-hugging": {"fit": "Body hugging"},
+  "snug": {"fit": "Body hugging"},
+  "structured": {"fit": "Tailored"},
+  "tailored": {"fit": "Tailored"},
+  "slim": {"fit": "Slim"},
+  "sleek": {"fit": "Sleek and straight"},
+  "straight": {"fit": "Sleek and straight"},
+  "stretchy": {"fit": "Stretch to fit"},
+  "stretch": {"fit": "Stretch to fit"}
+} 

@@ -1,0 +1,15 @@
+{
+  "floral": {"color_or_print": ["Floral Print"]},
+  "bold": {"color_or_print": ["Ruby Red", "Cobalt Blue"]},
+  "pastel": {"color_or_print": ["Pastel Pink", "Pastel Yellow"]},
+  "neutral": {"color_or_print": ["Sand Beige", "White","Off White"]},
+  "bright": {"color_or_print": ["Red", "Orange", "Yellow", "Electric Blue", "Hot Pink"]},
+  "vibrant": {"color_or_print": ["Red", "Orange", "Yellow", "Electric Blue", "Hot Pink"]},
+  "earth tones": {"color_or_print": ["Brown", "Tan", "Olive", "Rust", "Terracotta"]},
+  "earthy": {"color_or_print": ["Brown", "Tan", "Olive", "Rust", "Terracotta"]},
+  "cool tones": {"color_or_print": ["Blue", "Green", "Purple", "Teal", "Navy"]},
+  "warm tones": {"color_or_print": ["Red", "Orange", "Yellow", "Pink", "Coral"]},
+  "monochrome": {"color_or_print": ["Black", "White", "Gray"]},
+  "black and white": {"color_or_print": ["Black", "White"]},
+  "jewel tones": {"color_or_print": ["Emerald", "Sapphire", "Ruby", "Amethyst", "Topaz"]}
+} 

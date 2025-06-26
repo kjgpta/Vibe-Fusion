@@ -1,0 +1,11 @@
+streamlit
+spacy
+nltk
+pandas
+numpy
+scikit-learn
+openai
+python-dotenv
+openpyxl
+sentence-transformers 
+setuptools

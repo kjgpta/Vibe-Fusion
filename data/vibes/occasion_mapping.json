@@ -1,0 +1,106 @@
+{
+  "elevated date-night shine for tops": {
+        "fit": "Body hugging",
+        "fabric": ["Satin", "Velvet", "Silk"]
+    },
+
+    "comfy lounge tees": {
+        "fit": "Relaxed",
+        "sleeve_length": "Short sleeves"
+    },
+
+    "office-ready polish shirts": {
+        "fabric": "Cotton",
+        "neckline": "Collar"
+    },
+
+    "flowy dresses for garden-party": {
+        "fit": "Flowy",
+        "fabric": ["Chiffon", "Linen"],
+        "sleeve_length": "Short flutter sleeves",
+        "color_or_print": ["Pastel floral", "Floral"],
+        "occasion": "Party"
+    },
+
+    "elevated evening glam dresses": {
+        "fit": "Body hugging",
+        "fabric": ["Satin", "Silk"],
+        "sleeve_length": "Sleeveless",
+        "color_or_print": ["Sapphire blue", "Ruby red"],
+        "occasion": "Evening",
+        "length": ["Mini", "Short"]
+    },
+
+    "beachy vacay dress": {
+        "fit": "Flowy",
+        "fabric": "Linen",
+        "sleeve_length": "Spaghetti straps",
+        "color_or_print": ["Seafoam green", "Aqua"],
+        "occasion": "Vacation"
+    },
+
+    "dresses for retro 70s look": {
+        "fit": "Body hugging",
+        "fabric": "Crepe",
+        "sleeve_length": "Cap sleeves",
+        "color_or_print": ["Geometric print", "Abstract print"]
+    },
+
+    "work appropriate blazer": {
+        "category": "top",
+        "fit": "Tailored",
+        "fabric": ["Cotton", "Wool-blend"],
+        "sleeve_length": "Long sleeves"
+    },
+
+    "casual summer tops": {
+        "category": "top",
+        "fit": "Relaxed",
+        "fabric": ["Linen", "Cotton"],
+        "sleeve_length": ["Short sleeves", "Sleeveless"]
+    },
+
+    "elegant midi skirts": {
+        "category": "skirt",
+        "length": "Midi",
+        "fabric": ["Satin", "Silk", "Crepe"]
+    },
+
+    "trendy mini skirts": {
+        "category": "skirt", 
+        "length": "Mini",
+        "fabric": ["Denim", "Leather", "Sequined velvet"]
+    },
+
+    "comfortable wide leg pants": {
+        "category": "pants",
+        "fit": "Relaxed",
+        "pant_type": "Wide-legged"
+    },
+
+    "professional straight pants": {
+        "category": "pants",
+        "fit": "Sleek and straight",
+        "pant_type": "Straight ankle"
+    },
+
+    "party ready sequin pieces": {
+        "color_or_print": ["Sequin", "Metallic", "Iridescent"]
+    },
+
+    "boho chic vibes": {
+        "fabric": ["Linen", "Chiffon", "Georgette"],
+        "sleeve_length": ["Bishop sleeves", "Bell sleeves", "Balloon sleeves"]
+    },
+
+    "minimalist aesthetic": {
+        "color_or_print": ["White", "Black", "Beige", "Grey"],
+        "fit": "Tailored"
+    },
+
+    "romantic dinner date": {
+        "fabric": ["Silk", "Satin", "Chiffon"],
+        "neckline": ["V neck", "Sweetheart", "Cowl neck"],
+        "occasion": "Evening"
+    }
+} 

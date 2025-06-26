@@ -1,0 +1,14 @@
+{
+    "breathable": {"fabric": ["linen", "cotton"]},
+    "summer": {"fabric": ["linen", "cotton"]},
+    "luxurious": {"fabric": ["velvet", "lame"]},
+    "metallic": {"fabric": ["lame", "metallic"]},
+    "party": {"fabric": ["velvet", "lame"]},
+    "formal": {"fabric": ["velvet", "lame"]},
+    "casual": {"fabric": ["cotton", "linen"]},
+    "sporty": {"fabric": ["cotton", "linen"]},
+    "beach": {"fabric": ["cotton", "linen"]},
+    "winter": {"fabric": ["wool", "cashmere"]},
+    "spring": {"fabric": ["cotton", "linen"]},
+    "fall": {"fabric": ["wool", "cashmere"]}
+}
