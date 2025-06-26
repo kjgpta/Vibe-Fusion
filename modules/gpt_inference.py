@@ -21,7 +21,7 @@ class GPTInference:
         Args:
             api_key: OpenAI API key (optional, will try to get from environment)
         """
-        self.api_key = api_key or os.getenv('OPENAI_API_KEY')
+        self.api_key = api_key or os.getenv('openai_api_key')
         
         if self.api_key:
             openai.api_key = self.api_key

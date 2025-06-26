@@ -221,11 +221,11 @@ python run.py
 ### **Environment Variables**
 ```bash
 # OpenAI API (enables GPT inference)
-OPENAI_API_KEY=your_openai_api_key_here
+openai_api_key=your_openai_api_key_here
 
 # System tuning
-SIMILARITY_THRESHOLD=0.8        # Rule-based confidence threshold
-STREAMLIT_SERVER_PORT=8501      # Web interface port
+similarity_threshold=0.8        # Rule-based confidence threshold
+streamlit_server_port=8501      # Web interface port
 ```
 
 ### **Data Configuration**
