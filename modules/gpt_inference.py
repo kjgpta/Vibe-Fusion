@@ -5,7 +5,7 @@ Uses OpenAI's GPT models to infer fashion attributes from natural language queri
 when rule-based matching doesn't provide sufficient confidence.
 """
 
-import openai
+from openai import OpenAI
 import json
 import os
 from typing import Dict, List, Optional, Any
@@ -24,10 +24,11 @@ class GPTInference:
         self.api_key = api_key or os.getenv('openai_api_key')
         
         if self.api_key:
-            openai.api_key = self.api_key
+            self.client = OpenAI(api_key=self.api_key)
             self.available = True
             print("GPT inference initialized successfully")
         else:
+            self.client = None
             self.available = False
             print("GPT inference not available - no API key provided")
         
@@ -78,8 +79,8 @@ class GPTInference:
             # Create user prompt
             user_prompt = self._create_user_prompt(user_query, existing_attributes)
             
-            # Call GPT
-            response = openai.ChatCompletion.create(
+            # Call GPT using new API format
+            response = self.client.chat.completions.create(
                 model="gpt-4",
                 messages=[
                     {"role": "system", "content": system_prompt},

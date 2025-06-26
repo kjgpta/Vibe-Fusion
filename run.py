@@ -54,21 +54,6 @@ def install_requirements():
         print(f"❌ Failed to install requirements: {e}")
         return False
 
-def download_spacy_model():
-    """Download required spaCy model."""
-    print("\n🤖 Downloading spaCy English model...")
-    
-    try:
-        subprocess.check_call([
-            sys.executable, "-m", "spacy", "download", "en_core_web_md"
-        ])
-        print("✅ spaCy model downloaded successfully!")
-        return True
-    except subprocess.CalledProcessError as e:
-        print(f"❌ Failed to download spaCy model: {e}")
-        print("You can manually install it later with: python -m spacy download en_core_web_md")
-        return False
-
 def create_sample_catalog():
     """Create the sample product catalog."""
     print("\n📊 Creating sample product catalog...")
@@ -146,9 +131,6 @@ def main():
     # Install requirements
     if not install_requirements():
         print("⚠️  Continuing with existing packages...")
-    
-    # Download spaCy model
-    download_spacy_model()
     
     # Create sample catalog
     create_sample_catalog()
