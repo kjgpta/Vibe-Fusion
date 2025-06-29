@@ -78,7 +78,12 @@ class GPTInference:
             
             # Create user prompt
             user_prompt = self._create_user_prompt(user_query, existing_attributes)
-            
+            with open("data/apparels_shared.xlsx", "rb") as f:
+                upload_response = self.client.files.create(
+                    file=f,
+                    purpose="assistants"   # use "assistants" for the Assistants API, or "fine-tune"/"embeddings" etc. depending on your use case
+                )
+            file_id = upload_response.id
             # Call GPT using new API format
             response = self.client.chat.completions.create(
                 model="gpt-4",
@@ -87,7 +92,8 @@ class GPTInference:
                     {"role": "user", "content": user_prompt}
                 ],
                 temperature=0.3,
-                max_tokens=500
+                max_tokens=500,
+                file_ids=[file_id]
             )
             
             # Parse response
